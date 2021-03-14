@@ -11,6 +11,7 @@
 * create repository on Github
 * create Heroku user account: [https://id.heroku.com/login](https://id.heroku.com/login)
 * install Heroku CLI: [https://devcenter.heroku.com/articles/heroku-cli](https://devcenter.heroku.com/articles/heroku-cli)
+* create new APP on Heroku
 * under Deploy => Deployment method => Connect to Github => Search Github Repository
 * install Gunicorn
     `pip install gunicorn`
@@ -21,19 +22,19 @@
 * create requirments file using following command  <br />
     `pip freeze > requirements.txt` 
 * NOTE: after deploying on heroku, if any python library | frameworks' version is not compatible with Heroku then install supportive version or remove it from file if not necessary for project.
-* add import statement in settings.py <br />
+* add import statement at the top of settings.py <br />
     `import django_heroku`
 * at the bottom of settings.py add below <br />
     `django_heroku.settings(locals())`
 * change debug setting in settings.py <br />
     `DEBUG = False` OR use below code <br />
 
-`if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):` <br />
-    `DEBUG = True` <br />
-`else:` <br />
-    `DEBUG = False` <br />
+&nbsp;`if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):` <br />
+    &nbsp;&nbsp;&nbsp;`DEBUG = True` <br />
+&nbsp;`else:` <br />
+    &nbsp;&nbsp;&nbsp;`DEBUG = False` <br />
 
 * run below for heroku
-    `heroku run python manage.py migrate`
+    `heroku run -a <name of heroku api> python manage.py migrate`
 * create super user for heroku
-    `heroku run python manage.py createsuperuser`
+    `heroku run -a <name of heroku api> python manage.py createsuperuser`
