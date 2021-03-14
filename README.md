@@ -26,7 +26,13 @@
 * at the bottom of settings.py add below
     `django_heroku.settings(locals())`
 * change debug setting in settings.py
+    `DEBUG = False` OR use below code
+
+`if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):`
+    `DEBUG = True`
+`else:`
     `DEBUG = False`
+    
 * run below for heroku
     `heroku run python manage.py migrate`
 * create super user for heroku
