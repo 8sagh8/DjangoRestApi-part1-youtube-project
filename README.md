@@ -35,6 +35,6 @@
     &nbsp;&nbsp;&nbsp;`DEBUG = False` <br />
 
 * run below for heroku
-    `heroku run -a <name of heroku api> python manage.py migrate`
+    `heroku run -a <name of heroku app> python manage.py migrate`
 * create super user for heroku
     `heroku run -a <name of heroku app> python manage.py createsuperuser`
