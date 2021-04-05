@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from myApi.api import *
-
+# https://myrestapiframework.herokuapp.com/my_api/task_list/
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('my_api/task_list/', TaskList.as_view(), name='task_list'),

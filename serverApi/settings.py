@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '5-)$-q49-1r=_1w%wl*k3a*1kzcyv=t^!0wuxm8jz2+3=td7mr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
-#     DEBUG = True
-# else:
-DEBUG = False
+if (len(sys.argv) >= 2 and sys.argv[1] == 'runserver'):
+    DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = []
 
